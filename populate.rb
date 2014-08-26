@@ -23,8 +23,7 @@ class WordNetPopulator
       "properties" : {
         "name" : {
           "type" : "string",
-          "index" : "not_analyzed",
-          "search_analyzer" : "simple"
+          "index" : "not_analyzed"
         },
         "senses" : {
           "properties" : {
