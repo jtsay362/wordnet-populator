@@ -22,8 +22,18 @@ class WordNetPopulator
       },
       "properties" : {
         "name" : {
-          "type" : "string",
-          "index" : "not_analyzed"
+          "type" : "multi_field",
+          "path" : "just_name",
+          "fields" : {
+            "name" : {
+              "type" : "string",
+              "index" : "analyzed"
+            },
+            "lowerCasedName" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
         },
         "senses" : {
           "properties" : {
